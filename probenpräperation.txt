@@ -1,0 +1,17 @@
+﻿Probenpräperation
+
+Bilder:
+Der Brenner:
+Die Röhrchen:
+Die Vakuumpumpe:
+
+Die FC Probenröhrchen werden von der Glasbläserei der Universität Bayreuth aus Glas (??) hergestellt. Die Maße  (??) (Maße einfügen) sind so gewählt, dass sie gut ins verwendete FC Spektrometer passen und einfach in der Handhabung sind. Das Glas wird vor dem befüllen der Proben mit Lösungsmittel (THF oder Ethanol) gespült um  eventuelle Verunreinigungen zu entfernen. Verbliebenes Lösungsmittel wird mit Hilfe einer Heatgun erhitzt (T > 400K) und im Unterdrucks (p < 50 mbar) bei der hohen Temperatur abgesaugt. Eine Geruchsprobe hilft dabei fest zu stellen ob das Entfernen erfolgreich war. Im Zweifelsfall ist das Probenröhrchen über Nacht in einen Trockenofen zu stellen.
+Die gereinigten Röhrchen werden mit der Probe befüllt was nur bei hochviskosen Flüssigkeiten problematisch ist. Viskose Flüssigkeiten kleben an den Glaswänden, anstatt wie gewünscht in den unteren Teil des Proberöhrchens zu fließenn. Im Falle hochviskoser Flüssigkeiten kann sich das Erhitzen mit einer Heatgun lohnen, da die Viskosität im Allgemeinen mit höheren Temperaturen abnimmt. Bei hitzeempfindlichen Proben kann man den umgekehrten Weg gehen und die Temperatur unter den Schmelzpunkt (bzw. Glaspunkt) senken. Oft erhält man ein festes Material dass mit Hilfe eines Spatels in das Röhrchen geschüttet werden kann. Am Probenröhrchenboden verflüssigt  sich die Probe. Die Füllhöhe im Röhrchen richtet sich nach 2 Faktoren. Offensichtlich benötigt man für ein starkes Signal möglichst viel signalgebende Flüssigkeit. Allerdings ist es bei den diskutierten Messungen unerwünscht Flüssigkeit im inhomogenen Teil des statischen Magnetfeldes B_0 zu haben. Die Begründung ist, dass ein inhomogenes B_0 zu einem verkürzten Induktionszerfall führt. Die Messung wird somit durch zu große Füllhöhen negativ beeinflusst (Details siehe bla)(??). Für das verwendete Spektrometer liegen Erfahrungswerte vor in welchem Bereich der Elektromagnet eine gute Homogenität aufweist. Die optimale Füllhöhe liegt bei 2 cm (??). Um paramagnetischen Sauerstoff aus dem Röhrchen zu entfernen muss dieses evakuiert werden. Flüssigkeiten mit hohem Dampfdruck – also leichtflüchtigen Flüssigkeiten – müssen entsprechend gekühlt werden. Oft reicht flüssiger Stickstoff um den Übergang in die Gasphase und somit das Entweichen aus dem Probenröhrchen zu verhindern. Wird beim anschließenden Aufwärmen der Probe auf Raumtemperatur Sauerstoff frei (was durch Blasenbildung gut sichtbar ist) muss der Vorgang entsprechend wiederholt werden. Eventuelle Verluste der Probe beim Entgasen sind nicht ausgeschlossen und müssen berücksichtigt werden.
+
+
+Um das Probenröhrchen abzuschmelzen
+
+ein Butan- Sauerstoffgemisch wird verbrannt. Den Strom gilt es korrekt einzustellen. Dazu dreht man zunächst die Butanleitung auf und gibt langsam Sauerstoff dazu. Sodann kann der Gasstrom mit einem Funken entzunden werden und die gewünschte Flamme kann über das korrekte Verhältnis von 
+
+
+Durch den größeren Probenkopf mit größerer Bohrung im FC Spektrometer ergibt sich, dass hitzeempfindliche Proben leichter abzuschmelzen sind (??) (das kommt beim abschmelzen)

@@ -1,0 +1,239 @@
+% "Bachelor.tex" --- Template für Bachelor- oder Masterarbeit
+%
+% Nicht zu verwechseln mit einer LaTeX-Anleitung. Dieses Template dient lediglich als
+% Einstieg, um die Arbeit mit LaTeX zu verfassen.
+%
+% Wolfgang Schöpf, November 2011
+% letzte Änderung: Februar 2012
+
+% WICHTIG:
+%
+% Versucht bitte nicht, die Textgeometrie selbstständig zu ändern. Bei Laien ohne typografische
+% Ausbildung wird das meist zu keinem zufriedenstellendes Ergebnis führen. Abgesehen dabon wurde
+% dieses Problem bereits gelöst. Verwendet hierzu besser die Klassen-Option "DIV".
+
+% ----------------------------- Beginn des Vorspanns ----------------------------------------
+%
+% Dokumentenklasse und Packages
+% Die folgenden Zeilen sollen möglichst nicht verändert werden
+\documentclass[paper=a4,bibliography=totoc,BCOR=10mm,twoside,numbers=noenddot,fontsize=11pt]{scrreprt}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{graphicx}
+\usepackage{nicefrac}
+\usepackage{fancyvrb}
+\usepackage{amsmath,amssymb,amstext}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage{natbib}
+\usepackage{microtype}
+\usepackage[format=plain]{caption}
+% Hier können weitere Packages angefügt werden
+\usepackage{hyperref}
+
+
+
+% Abschnittseinrückung und -abstand
+% Die folgenden Zeilen sollen möglichst nicht verändert werden
+\parindent 0.0cm
+\parskip 0.8ex plus 0.5ex minus 0.5ex
+
+% Anzahl und Größe von Gleitobjekten
+% maximal 2 Objekte oben und unten
+% erlaubt auch größere Bilder, welche die ganze Seite benötigen
+% Die folgenden Zeilen sollen möglichst nicht verändert werden
+\setcounter{bottomnumber}{2}
+\setcounter{topnumber}{2}
+\renewcommand{\bottomfraction}{1.}
+\renewcommand{\topfraction}{1.}
+\renewcommand{\textfraction}{0.}
+
+% Verschiedenes
+\pagestyle{headings}          % Der Seitenstil sollte möglichst nicht verändert werden
+\graphicspath{{./pics/}}    % Der Pfad für die Abbildungen Abbildungen wird gesetzt
+\VerbatimFootnotes            % \verb etc. auch in \footnotes möglich
+%
+% ------------------------------- Ende des Vorspanns -----------------------------------------
+
+
+% ----------------------------- Beginn des Dokumentes ----------------------------------------
+%
+\begin{document}
+\nonfrenchspacing             % Zusätzlicher kleiner Zwischenraum am Satzende; macht den Text netter lesbar.
+
+% ----------------------------- Beginn der Titelseite ----------------------------------------
+%
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+
+% Titel ändern!
+{\Huge\bf \LaTeX --Vorlage für eine} \\[3ex]\strut
+{\Huge\bf spc- oder Masterarbeit} \\[3ex]\strut
+{\Huge\bf (z.B.\ Physik an der Uni Bayreuth)}
+
+\vfill
+% Hier kann zur Motivation optionalerweise auch schon mal ein Bild sein
+\includegraphics[width = 0.8\textwidth]{titel}
+\vfill
+
+{\Large Diplomarbeit aus dem Fachbereich Physik} \\[3ex]
+{\Large der Universität Bayreuth} \\[3ex]
+{\Large vorgelegt von} \\[5ex]
+
+% Namen ändern!
+{\LARGE\bf Max Flämig} \\[5ex]
+
+% Namen und Datum ändern!
+{\large Gutachter: Prof.\ Dr.\ Ernst A. Rössler} \\[2ex]
+{\large Tag der Einreichung: 1.\ Oktober  2013}\\
+
+\end{center}
+\end{titlepage}
+\thispagestyle{empty}
+%
+% ------------------------------ Ende der Titelseite -----------------------------------------
+
+% Inhaltsverzeichnis auf die nächste rechte Seite
+\cleardoublepage
+\tableofcontents
+
+% Die Einleitung beginnt auf der nächsten rechten Seite, jedes weitere Kapitel auf einer jeweils neuen Seite 
+%
+\cleardoublepage
+\chapter{Einleitung und Motivation}
+\label{chap:einleitung}
+%
+Dieses Dokument soll keine \LaTeX --Anleitung ersetzen, sondern stellt lediglich eine Vorlage zum 
+Erstellen einer Bachelor-- oder auch einer Master--Arbeit dar. Es soll Nicht--\LaTeX --Vertrauten den 
+Einstieg erleichtern und \LaTeX --Experten von Formfragen befreien. Für \LaTeX --Feinheiten wird auf 
+die entsprechende Literatur verwiesen \citep{Kopka2000,Lamport1995,Latex2011}. 
+
+Die meisten \LaTeX --Befehle werden hier nicht näher erklärt, deren Gebrauch sollte sich aber aus dem 
+Quelltext ``Bachelor.tex'' und den weiteren, in Kapitel~\ref{chap:grundlagen} beschriebenen, Dateien
+erschließen. Deshalb ist es als Einstieg sicher eine gute Idee, den Quelltext zusammen mit dem fertigen 
+Ausdruck zu lesen, um ein Gefühl für die \LaTeX --Struktur zu bekommen. Außerdem sollte man sich nicht 
+scheuen, Kollegen oder auch den Autor zu befragen. Es wird hier zwar auf grundlegende 
+\LaTeX --Gestaltungsmöglichkeiten und einige Spezialitäten eingegangen, aber natürlich können nicht alle 
+Eventualitäten abgedeckt werden. Deshalb sollten gewünschte Ergänzungen oder Verbesserungsvorschläge an 
+den Autor heran getragen werden.
+
+Diese Vorlage existiert in zwei Ausführungen. Das vorliegende Dokument beschäftigt sich mit einem
+einspaltigen Seitenaufbau, wie ihn auch die meisten Bücher verwenden. Gerade bei größeren Seiten, wie
+etwa dem DIN-A4--Format, im Zusammenhang mit einer üppigen Seitenausfüllung gilt jedoch ein zweispaltiger
+Seitenaufbau als angenehmer lesbar. Leider lässt sich zwischen ein- und zweispaltigem Dokument nicht so
+einfach umschalten, weshalb eine zweite Vorlage für den zweispaltigen Aufbau existiert. Hierfür wurden 
+alle Quelldateien durch Anhängen von ``\_2sp'' (also z.B.\ ``Bachelor\_2sp.tex'') benannt. Der Text ist 
+im Wesentlichen der gleiche wie hier, außer dass im Anhang~A kurz auf einige wichtige Besonderheiten bei 
+zweispaltigen Texten eingegangen wird.%
+%
+\footnote{Einem Nicht--\LaTeX --Geübten unter Zeitdruck wird unbedingt das einspaltige Format empfohlen!}
+
+Kapitel~\ref{chap:grundlagen} geht auf das grundsätzliche Arbeiten mit \LaTeX , den Aufbau und die
+Gliederung des Textes sowie auf die Verwendung von Zitaten ein. Das Einfügen von Bildern und die Gestaltung 
+von Tabellen wird in Kapitel~\ref{chap:aufbau} behandelt, während sich Kapitel~\ref{chap:messungen} 
+mit Gleichungen in \LaTeX\ sowie damit verwandten Problemen befasst. In Kapitel~\ref{chap:diskussion} 
+werden verschiedene weitere Gestaltungsmöglichkeiten und wichtige Befehle diskutiert. Die Arbeit 
+schließt mit einer Zusammenfassung in Kapitel~\ref{chap:ausblick}.
+
+
+% Das 2. Kapitel wird aus "Grundlagen.tex" eingelesen
+\input{theorie}
+
+% Das 3. Kapitel wird aus "Aufbau.tex" eingelesen
+\input{proben}
+
+% Das 4. Kapitel wird aus "Messungen.tex" eingelesen
+\input{messungen}
+
+% Das 5. Kapitel wird aus "Diskussion.tex" eingelesen
+\input{diskussion}
+
+
+% Das letzte Kapitel steht wieder direkt in der Masterdatei
+%
+\chapter{Zusammenfassung und Ausblick}
+\label{chap:ausblick}
+%
+Meine Hoffnung ist, dass durch dieses kleine Dokument der Einstieg in \LaTeX\ etwas leichter fällt und beim
+Schreiben einer Abschlussarbeit nicht zu viel Zeit zum Erlernen eines Textverarbeitungssystems verloren wird.
+Sollte einmal ein scheinbar unlösbares Problem auftauchen, so wage ich zu behaupten, dass es in \LaTeX\ für 
+alles Drucktechnische eine Lösung gibt, man muss sie nur finden.% 
+%
+\footnote{So ging es mir übrigens auch beim Schreiben dieser Vorlage.}
+
+Viel Spaß dabei! 
+
+% -------------------------- Hier beginnt der Anhang ---------------------------------------
+%
+\appendix
+\chapter{Herleitung und Lösung von Gleichung 3}
+\label{chap:gl3}
+%
+Die Gliederungsstruktur ist die gleiche wie im normalen Text. Lediglich die Hauptnummerierung
+erfolgt durch Buchstaben anstelle von Zahlen. Deshalb wird hier auf weiteren Text verzichtet.
+
+\section{Vorbereitung}
+\label{sec:gl3:vorbereitung}
+
+\section{Herleitung}
+\label{sec:gl3:herleitung}
+
+\section{Lösung}
+\label{sec:gl3:loesung}
+
+
+\chapter{Genaue Beschreibung der Auswertemethode}
+\label{chap:methode}
+%
+% --------------------------- Hier endet der Anhang ----------------------------------------
+
+
+% Das Literaturverzeichnis beginnt auf einer neuen rechten Seite, die Einträge stehen in der Datei
+% "Bachelor.bib", welche natürlich umbenannt werden kann.
+% Der Zitierstil (\bibliographystyle{EPVBachelor}) sollte möglichst nicht geändert werden.
+%
+\cleardoublepage
+\bibliographystyle{EPVBachelor}
+\bibliography{Bachelor}
+
+% Die Danksagung beginnt auf einer neuen rechten Seite, hat keine eigene Nummer und kommt auch nicht ins 
+% Inhaltsverzeichnis. Außerdem möchten wir ab jetzt keine Seitenüberschriften und keine Seitennummern mehr.
+%
+\cleardoublepage
+\pagestyle{empty}
+\chapter*{Danksagung}
+\thispagestyle{empty}      % keine Seitennummer
+%
+Hier kann man sich mehr oder weniger euphorisch bei allen bedanken, von denen man meint, dass 
+sie zum Gelingen der Arbeit beigetragen haben. Vergessen sollte man wahrscheinlich nicht die 
+Betreuer, die Lehrstuhlmitarbeiter, Gatte, Freund oder Freundin und die Eltern.
+
+Ich danke Herrn Prof.\ Ingo Rehberg und Herrn Stephan Messlinger sehr herzlich für detaillierte 
+Diskussionen den Inhalt und das Layout dieses Dokumentes betreffend. Durch sorgfältiges
+Korrekturlesen trugen Herr Thomas Müller und Herr Tobias Lang ma\ss geblich zum Gelingen
+dieses Projektes bei.
+
+% Die Erklärung der Selbstständigkeit steht auf einer neuen rechten Seite, hat keine eigene Nummer und kommt 
+% auch nicht ins Inhaltsverzeichnis. Hier sollte nur der Name und das Datum geändert werden.
+%
+\cleardoublepage
+\chapter*{Erklärung}
+\thispagestyle{empty}      % keine Seitennummer
+%
+Hiermit erkläre ich, dass ich die vorliegende Arbeit selbstständig verfasst und keine anderen 
+als die angegebenen Quellen und Hilfsmittel benutzt habe. Diese Arbeit wurde von mir bisher
+weder in gleicher noch in ähnlicher Form zur Erlangung eines akademischen Grades eingereicht.\\[3ex]
+
+Bayreuth, den 30.\ August 2010 \hfill 
+\begin{minipage}[t]{7cm}
+   \dotfill \\
+   \centerline{Wolfgang Schöpf}
+\end{minipage}
+
+\end{document}
+%
+% ------------------------------ Ende des Dokumentes -----------------------------------------
+
+Alles was jetzt kommt, wird ignoriert!

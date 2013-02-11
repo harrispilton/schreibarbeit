@@ -1,0 +1,116 @@
+% "Diskussion.tex" --- Kapitel 5 für das Template "Bachelor.tex"
+%
+% Wolfgang Schöpf, November 2011
+% letzte Änderung: Februar 2012
+
+\chapter{Diskussion}
+\label{chap:diskussion}
+%
+\section{Aufzählungen}
+\label{sec:aufzählung}
+%
+Als wichtigste Aufzählungsmöglichkeiten stehen zur Verfügung:
+%
+\begin{enumerate}
+\item die \verb+enumerate+--Umgebung
+   \begin{enumerate}
+	   \item Erster Punkt
+	   \item Zweiter Punkt
+	   \item Dritter Punkt
+   \end{enumerate}
+%
+\item die \verb+itemize+--Umgebung
+   \begin{itemize}
+	   \item Erster Punkt
+	   \item Zweiter Punkt
+	   \item Dritter Punkt
+   \end{itemize}
+%
+\item und die \verb+description+--Umgebung
+   \begin{description}
+	   \item[Kamel] Ein Säugetier
+	   \item[Forelle] Ein Fisch
+	   \item[Baum] Eine Pflanze
+   \end{description}
+\end{enumerate}
+%
+Dieses Beispiel verdeutlicht auch, dass die verschiedenen Umgebungen ineinander verschachtelt
+werden können, und zwar bis zu einer Tiefe von 4 einzeln und wechselseitig. Je nach Ebene ändert
+sich dabei der Stil der Markierung.
+
+\section{Weitere Formatierungshilfen}
+\label{sec:formatierung}
+%
+\subsection{Überstehende Zeilen}
+\label{subsec:sloppy}
+%
+Kommen überlange Worte vor, so kann oder mag \LaTeX\ manchmal die Zeile nicht am rechten Rand 
+umbrechen, so dass einzelne Wörter nach rechts über die eigentliche Zeilenlänge hinaus stehen.
+Dies kann durch die \verb+sloppypar+--Umgebung, welche sich auf einen ganzen Absatz bezieht, 
+verhindert werden. Gegebenenfalls wird dann mehr und oft auch unschöner Zwischenraum zwischen 
+die einzelnen Wörter eingefügt, die Rechtsbündigkeit des Absatzes bleibt aber erhalten.
+
+\begin{sloppypar}
+%
+Solche Absätze wurden z.\,B.\ in Abschnitt~\ref{subsec:quelltext} oder in Abschnitt~\ref{subsec:labels} 
+und auch in diesem Absatz hier definiert. Ohne diese Umgebung würde der letzte Teil von 
+Abschnitt~\ref{subsec:quelltext} so aussehen:
+%
+\end{sloppypar}
+
+Hierbei wird durch ``\verb+dvips Bachelor+'' eine Postscript-Datei und durch ``\verb+dvipdfm Bachelor+'' 
+eine PDF-Datei generiert. Die ersten 4 Zeilen können auch durch ``\verb+texify Bachelor.tex+'' ersetzt 
+werden.
+
+\subsection{Trennhilfen}
+\label{subsec:trennen}
+%
+Manchmal kann \LaTeX\ einzelne Wörter nicht trennen, wie z.\,B.\ hier:
+
+``\ldots für abgesetzte Formeln gibt es zwei Möglichkeiten, nämlich die \verb+equation+--Umgebung für
+einzeilige Formeln und die \verb+eqnarray+--Umgebung für mehrzeilige Formeln.''
+
+oder Wörter werden falsch getrennt, wie etwa ``Wortende'': Wor- tende.
+
+In solchen Fällen kann die Trennung durch Einfügen der Trennhilfe `\verb+\-+' korrigiert werden:
+\verb+Wort\-ende+. In einem Wort können auch mehrere Trennhilfen vorkommen: \verb+Um\-ge\-bung+.
+\LaTeX\ wird die betroffenen Wörter dann ausschließlich an diesen Stellen trennen.
+
+Es wird dringend empfohlen, bei der endgültigen Version eines Dokumentes die rechten Ränder nach 
+fehlerhaften Trennungen abzusuchen!
+
+\subsection{Nicht zu trennende Ausdrücke}
+\label{subsec:nichttrennen}
+%
+Es kann vorkommen, dass einzelne Wörter, Wortgruppen oder sonstige Ausdrücke nicht getrennt oder 
+umgebrochen werden sollen. Dies erreicht man durch Einschließen des jeweiligen Ausdrucks in eine
+\verb+\mbox{"Ausdruck"}+. Man könnte also auch \verb+\mbox{Gleichung (3)}+ statt \verb+Gleichung~(3)+ 
+schreiben. 
+
+Im folgenden Beispiel wurde die zweite Variante durch \verb+\mbox{$f(x) = x^2$}+ erzwungen, 
+was insbesondere dann besser zu lesen ist, wenn statt des Zeilenumbruchs gar ein Seitenumbruch
+statt findet:
+
+\ldots \ldots dies ist der Rest des letzten Satzes. Betrachtet man nun die Funktion: $f(x) = x^2$, so findet man \ldots
+
+\ldots \ldots dies ist der Rest des letzten Satzes. Betrachtet man nun die Funktion: \mbox{$f(x) = x^2$}, so findet man \ldots
+
+Solche Konstruktionen können allerdings leicht zu überstehenden Zeilen führen, welche dann wieder
+durch die \verb+sloppypar+--Umgebung aufzulösen sind:
+
+\begin{sloppypar}
+%
+\ldots \ldots dies ist der Rest des letzten Satzes. Betrachtet man nun die Funktion: \mbox{$f(x) = x^2$}, so findet man \ldots
+%
+\end{sloppypar}
+
+\section{Eine abschließende Warnung}
+\label{sec:warnung}
+%
+Man sieht zu Beginn des \LaTeX --Quelltextes immer wieder Anweisungen zur Textgeometrie. Ich möchte 
+davor ausdrücklich warnen! Seit der Erfindung des modernen Buchdrucks im 15.\ Jahrhundert wurde sehr
+viel darüber nachgedacht und die Erfahrung zeigt, dass eine Änderung durch Laien ohne typografische
+Ausbildung meist zu keinem zufriedenstellenden Ergebnis führt. Das Anpassen der Textgeometrie sollte 
+ausschließlich mit Hilfe der ``DIV = $X$''--Option der verwendeten \LaTeX --Klasse geschehen. Dabei
+bedeutet eine größere ganze Zahl $X$ einen höheren und breiteren Text, wobei Höhe, Breite und Ränder 
+proportional nach festen Richtlinien geändert werden. 

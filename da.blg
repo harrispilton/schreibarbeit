@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: da.aux
+The style file: EPVBachelor.bst
+Database file #1: Bachelor.bib
+ptr=1, stack=
+
+---the literal stack isn't empty for entry Bergmann1978
+while executing---line 3155 of file EPVBachelor.bst
+Warning--there's a number but no volume in Madsen2006
+You've used 19 entries,
+            2845 wiz_defined-function locations,
+            772 strings with 7233 characters,
+and the built_in function-call counts, 7909 in all, are:
+= -- 775
+> -- 310
+< -- 20
++ -- 120
+- -- 101
+* -- 638
+:= -- 1436
+add.period$ -- 37
+call.type$ -- 19
+change.case$ -- 129
+chr.to.int$ -- 19
+cite$ -- 20
+duplicate$ -- 390
+empty$ -- 614
+format.name$ -- 124
+if$ -- 1601
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 14
+newline$ -- 61
+num.names$ -- 79
+pop$ -- 133
+preamble$ -- 1
+purify$ -- 109
+quote$ -- 0
+skip$ -- 255
+stack$ -- 0
+substring$ -- 381
+swap$ -- 84
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 156
+warning$ -- 1
+while$ -- 70
+width$ -- 0
+write$ -- 206
+(There was 1 error message)
